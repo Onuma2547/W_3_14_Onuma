@@ -43,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: FutureBuilder<List<User>>(
         future: ApiService.fetchUser(),
         builder: (context, snapshot) {
-          //รอข้อมูล
+
           if (snapshot.connectionState == ConnectionState.waiting) {
             return Center(child: CircularProgressIndicator());
           }
